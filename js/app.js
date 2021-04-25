@@ -51,6 +51,17 @@ function sectionPosition(section){
     console.log(position);
     return (position.y >=0 && position.y <300);   // true? active section
 }
+
+function addRemoveActiveClass(section){
+    //1. remove other active sections
+    for(element of sections){
+        if(element.id != section.id && element.classList.contains("your-active-class")){
+                // remove active class 
+                element.classList.remove("your-active-class");
+        }
+    }
+    section.classList.add("your-active-class");
+}
 /**
  * End Helper Functions
  * Begin Main Functions
