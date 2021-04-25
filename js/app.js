@@ -62,6 +62,21 @@ function addRemoveActiveClass(section){
     }
     section.classList.add("your-active-class");
 }
+//section Active: 
+function activeSection(){
+    //1. loop over all sections to determine which one is active
+    sections.forEach((section)=>{
+        //2. get the position of each section
+        let active=sectionPosition(section);   //test
+        //console.log("x= ",x);               //test
+        if(active){  //active section
+
+            addRemoveActiveClass(section);
+        }
+    })
+}
+
+
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -90,3 +105,4 @@ function addRemoveActiveClass(section){
 // Set sections as active
 
 initNavLinks();
+activeSection();
