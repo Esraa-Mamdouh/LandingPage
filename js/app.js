@@ -84,6 +84,23 @@ function scrollActive(){
         activeSection();
     });
 }
+
+//Scroll to Anchor: list click event listner  
+function scrollTOFunction(){
+    //add "mouse click" event listner to the whole ul
+    navContainer.addEventListener("click",function (e){
+        //prevent default behavior of link click
+        e.preventDefault();
+        const sectionName=e.target.textContent;
+        //loop for all sections to determine which section to scroll to and how to do so
+        sections.forEach((section)=>{
+            if (section.getAttribute("data-nav")=== sectionName){
+                //transition is smooth, vertical alignment= end and horizontal alignment= nearest
+                section.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+            }
+        })
+    })
+}
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -112,3 +129,4 @@ function scrollActive(){
 // Set sections as active
 initNavLinks();
 scrollActive();
+scrollTOFunction();
