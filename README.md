@@ -12,19 +12,19 @@
 ## Introduction 
 
 
-This project  build a multi-section landing page, with a dynamically updating navigational menu based on the amount of content that is added to the page, detecting active section in the page.
+This project  build a multi-section landing page, with a dynamically updating navigational menu based on the amount of content that is added to the page and detecting active section in the page.
 
 
 ## Requirements meet
 
 - ### Navigation
-	- Navigation is built dynamically as an unordered list for each section.
+	- Navigation links are built dynamically as an unordered list for each section.
 
 - ### Section Active State
 	- It showes  which section is being viewed while scrolling through the page.
 
 - ### Scroll to Anchor
-	- When clicking an item from the navigation menu, the link scrolls smoothly to the appropriate section. 
+	- When clicking an item from the navigation menu, the link scrolls smoothly to the start of the appropriate section. 
 
 - ### Styling
 	- Styling has been added for active states and links.
