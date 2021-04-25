@@ -49,7 +49,7 @@ function sectionPosition(section){
     let position=section.getBoundingClientRect(); 
     console.log(section.id);
     console.log(position);
-    return (position.y >=0 && position.y <300);   // true? active section
+    return (position.y >=-1 && position.y <310);   // true? active section
 }
 
 function addRemoveActiveClass(section){
@@ -62,7 +62,7 @@ function addRemoveActiveClass(section){
     }
     section.classList.add("your-active-class");
 }
-//section Active: 
+ //section Active: detects which section is active and change the class of it to "your-active-class" and remove this class from all other sections not active
 function activeSection(){
     //1. loop over all sections to determine which one is active
     sections.forEach((section)=>{
@@ -76,7 +76,14 @@ function activeSection(){
     })
 }
 
-
+//section Active: scroll event and determine active sections while going on 
+function scrollActive(){
+    // add "scroll" event listner to the whole document
+    document.addEventListener("scroll",function (evt){
+        evt.preventDefault();
+        activeSection();
+    });
+}
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -104,4 +111,4 @@ function activeSection(){
 
 // Set sections as active
 initNavLinks();
-activeSection();
+scrollActive();
