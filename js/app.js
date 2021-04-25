@@ -47,8 +47,8 @@ function addLinkClassStyles(li,section){
 //Section Active State: section position according to page top and return if it's on the top of the page 
 function sectionPosition(section){
     let position=section.getBoundingClientRect(); 
-    console.log(section.id);      //test
-    console.log(position);        //test
+    //console.log(section.id);      //test
+    //console.log(position);        //test
     return (position.y >=-1 && position.y <310);   // true? active section
 }
 
