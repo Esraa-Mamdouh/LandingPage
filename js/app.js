@@ -17,7 +17,7 @@ let liFragment=document.createDocumentFragment();
  * 
 */
 
-// initialize links of the nav bar 
+//Navigation stage: initialize links of the nav bar 
 function initNavLinks (){
     //1. loop the sections and create li & <a> accordingly
     for(section of sections){
@@ -38,10 +38,18 @@ function initNavLinks (){
     //8. add fragment to navContainer ul (that decreases Reflow)
     navContainer.appendChild(liFragment);
 }
-// add class style to links in the nav bar (li and href link to <a>)
+//Navigation stage: add class style to links in the nav bar (li and href link to <a>)
 function addLinkClassStyles(li,section){
     li.classList.add("menu__link");
     li.firstChild.setAttribute("href",`#${section.id}`);
+}
+
+//Section Active State: section position according to page top and return if it's on the top of the page 
+function sectionPosition(section){
+    let position=section.getBoundingClientRect(); 
+    console.log(section.id);
+    console.log(position);
+    return (position.y >=0 && position.y <300);   // true? active section
 }
 /**
  * End Helper Functions
