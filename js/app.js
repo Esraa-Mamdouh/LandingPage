@@ -1,4 +1,4 @@
-console.log("Js has been added");
+//console.log("Js has been added");    //test
 /**
  * Define Global Variables
  * 
@@ -27,7 +27,7 @@ function initNavLinks (){
         const a=document.createElement("a");
         //4. set the name of the link
         a.textContent=section.getAttribute("data-nav");
-        console.log(a.textContent);      //test
+        //console.log(a.textContent);      //test
         //5. add a to li
         li.appendChild(a);
         //6. add li to fragment
@@ -47,19 +47,21 @@ function addLinkClassStyles(li,section){
 //Section Active State: section position according to page top and return if it's on the top of the page 
 function sectionPosition(section){
     let position=section.getBoundingClientRect(); 
-    console.log(section.id);
-    console.log(position);
+    console.log(section.id);      //test
+    console.log(position);        //test
     return (position.y >=-1 && position.y <310);   // true? active section
 }
 
+// Section Active State: add  "your-active-class" to the active class and remove it from the non-active class 
 function addRemoveActiveClass(section){
-    //1. remove other active sections
+    //1. remove "your-active-class" from non-active sections
     for(element of sections){
         if(element.id != section.id && element.classList.contains("your-active-class")){
                 // remove active class 
                 element.classList.remove("your-active-class");
         }
     }
+    //2. add "your-active-class" to active section
     section.classList.add("your-active-class");
 }
  //section Active: detects which section is active and change the class of it to "your-active-class" and remove this class from all other sections not active
@@ -108,25 +110,15 @@ function scrollTOFunction(){
 */
 
 // build the nav
-
+initNavLinks();
 
 // Add class 'active' to section when near top of viewport
-
+scrollActive();
 
 // Scroll to anchor ID using scrollTO event
-
+scrollTOFunction();
 
 /**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
-initNavLinks();
-scrollActive();
-scrollTOFunction();
+  * End Main Functions
+  * 
+  */
