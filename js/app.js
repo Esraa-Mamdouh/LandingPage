@@ -115,7 +115,7 @@ initNavLinks();
 // Add class 'active' to section when near top of viewport
 scrollActive();
 
-// Scroll to anchor ID using scrollTO event
+// Scroll to anchor ID using scroll event
 scrollTOFunction();
 
 /**
