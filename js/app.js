@@ -97,8 +97,8 @@ function scrollTOFunction(){
         //loop for all sections to determine which section to scroll to and how to do so
         sections.forEach((section)=>{
             if (section.getAttribute("data-nav")=== sectionName){
-                //transition is smooth, vertical alignment= end and horizontal alignment= nearest
-                section.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+                //transition is smooth, vertical alignment= start and horizontal alignment= nearest
+                section.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
             }
         })
     })
