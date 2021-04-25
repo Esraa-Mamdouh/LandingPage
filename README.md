@@ -8,8 +8,9 @@
   - [Requirements meet](#requirements-meet)
   - [Hierarchy](#hierarchy)
   - [Main Functions](#main-functions)
-  
-## Introduction
+
+## Introduction 
+
 
 This project  build a multi-section landing page, with a dynamically updating navigational menu based on the amount of content that is added to the page, detecting active section in the page.
 
@@ -17,19 +18,19 @@ This project  build a multi-section landing page, with a dynamically updating na
 ## Requirements meet
 
 - ### Navigation
-	--Navigation is built dynamically as an unordered list for each section.
+	- Navigation is built dynamically as an unordered list for each section.
 
 - ### Section Active State
-	-- It showes  which section is being viewed while scrolling through the page.
+	- It showes  which section is being viewed while scrolling through the page.
 
 - ### Scroll to Anchor
-	-- When clicking an item from the navigation menu, the link scrolls smoothly to the appropriate section. 
+	- When clicking an item from the navigation menu, the link scrolls smoothly to the appropriate section. 
 
 - ### Styling
-	-- Styling has been added for active states and links.
+	- Styling has been added for active states and links.
 
 - ### HTML Structure
-	-- There are 5 sections that have been added to the page(at leat 4 sections).
+	- There are 5 sections that have been added to the page(at leat 4 sections).
 ## Hierarchy
 
 ```
@@ -43,10 +44,10 @@ README.md
 
 ## Main Functions
 `initNavLinks();`
-- Creates navigation links with CSS style class.
+- Creates navigation links and add some CSS style class.
 
 `scrollActive();`
 - Mark the active section with CSS style class depending on section's position in the screen, while scrolling in the page and remove style from non current active sections.
 
 `scrollTOFunction();`
-- When clicking on links in the nav bar, it moves smooth to the section corresponding to the clicked link with smooth scrolling motion.
+- When clicking on links in the nav bar, it moves to the section corresponding to the clicked link with smooth scrolling motion.
